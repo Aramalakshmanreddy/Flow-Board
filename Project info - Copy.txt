@@ -1,0 +1,33 @@
+Domain class
+	Registration
+		id-email
+		username
+		password & confirm the password
+
+	User
+		id
+		password
+		
+	Board
+		id
+		project title
+		description
+		members list
+		stage list - list of stages
+
+	stage
+		id
+		stage name
+		tasks - list of tasks
+
+	task
+		id	
+		task title
+		description
+		priority
+		assigned member
+		contact
+		
+
+add ons - notification, separate login for leaders
+		

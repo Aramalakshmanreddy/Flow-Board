@@ -1,0 +1,59 @@
+For User Authentication Service :(MySql)
+
+user class
+
+private String email  (Id)
+private String userName
+private String password
+
+//private String role
+//Profile information
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For Kanban Board service(Mongo)
+
+User Class
+
+private int userid
+private String username
+private List<Board> boards
+
+Board Class
+
+private int board ID
+private String boardName
+private String description
+private String creator/User ID
+private Date creation Date
+private List<Stage> stages
+private String[] members
+
+Stage Class:
+
+private int stageId;
+private String stageName;
+private List<Task> tasks;
+
+
+Tasks class:
+
+  private int task ID
+    private String task Name.
+    private String description
+    private String Assignee
+    private Date Due Date
+    private String priority
+   //Attachments
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Notification Service 
+
+notification class:
+
+private int notificationId;
+private Task task;
+private String message;
+
+
