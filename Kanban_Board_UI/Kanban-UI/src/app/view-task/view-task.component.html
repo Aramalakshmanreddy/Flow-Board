@@ -1,0 +1,44 @@
+<div *ngIf="task != null">
+
+  <div class="tasks-container">
+
+    <div *ngFor="let t of task" class="task smokey-white-list p-2 mb-2"
+      [style.background]="getBackgroundColor(t.priority)">
+      <div class="border-bottom  border-dark "style="max-width: 300px; overflow: hidden; white-space: pre-line;" >
+      <div class="mb-1">
+      <div style="font-weight: bold;">Task:<span style="font-weight: normal; margin-left: 5px; ">{{ t.taskName | titlecase }}</span></div>
+      <div style="font-weight: bold;">Assigned To: <span style="font-weight: normal;  margin-left: 5px; ">{{ t.assignee | titlecase }}</span></div>
+      <div style="font-weight: bold;">Due Date: <span style="font-weight: normal;  margin-left: 5px;">{{ t.dueDate | date}}</span></div>
+      <div style="font-weight: bold;">Priority: <span style="font-weight: normal;  margin-left: 5px;" class="mb-1">{{ t.priority }}</span></div>
+    </div>
+  </div>
+      <div class="dropdown mt-2 d-flex justify-content-between">  
+        <a class="" type="" id="statusDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <mat-icon color="primary" matTooltip="move the task to">arrow_drop_down</mat-icon>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="statusDropdown">
+          <a class="dropdown-item" (click)="movetask(t.taskId,col.stageId,col.stageName,stageId,boardId)"
+            *ngFor="let col of stages">{{col.stageName | titlecase}}</a>
+        </div>
+        <a type="button" (click)="updateTask(t)" *ngIf="creator === userName">
+          <mat-icon matTooltip="Edit the Task" color="primary">edit</mat-icon>
+        </a>
+        <a (click)="deleteTask(t.taskId,stageId,boardId)" *ngIf="creator === userName">
+          <mat-icon matTooltip="Delete the Task" color="primary">delete</mat-icon>
+        </a>
+        <a type="button" (click)="toggleCard(t)">
+          <mat-icon matTooltip="Expand the task info" color="primary">open_in_full</mat-icon>
+        </a>
+      </div>
+
+      <div *ngIf="t.showCard " class="card mt-3" [style.background]="getBackgroundColor(t.priority)">
+        
+        <div class="card-header" style="font-weight: bold;">Description: </div>
+        <span class="card-body overflow-auto " style="white-space: pre-wrap; overflow-y: auto;"><span>{{t.description}}</span></span>
+      
+    </div>
+    </div>
+
+  </div>
+  
+</div>

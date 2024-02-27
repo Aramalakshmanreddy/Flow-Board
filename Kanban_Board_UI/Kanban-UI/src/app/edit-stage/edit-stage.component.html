@@ -1,0 +1,19 @@
+
+<!-- <section class="stage"> -->
+    <div class="task task-modal">
+        <h1 class="text-center"><b>Edit Stage</b></h1>
+    <form #formRef="ngForm">
+        <mat-form-field appearance="outline" class="form-group">
+            <mat-label>Stage Name</mat-label>
+            <input type="text" matInput name="stageName" required maxlength="20" pattern="^[a-zA-Z][a-zA-Z0-9 .\-_]{2,}$" [(ngModel)]="stage.stageName"/>
+            <mat-error *ngIf="formRef.controls['stageName']?.errors?.['required']">Stage name cannot be empty</mat-error>
+            <mat-error *ngIf="formRef.controls['stageName']?.errors?.['pattern']">Stage name should have 3 characters starting with a letter</mat-error>
+        </mat-form-field>
+    
+        <div class="btn-container">
+            <button color="primary" class="me-3" mat-raised-button matTooltip="Edit the Stage" type="submit" (click)="editStage()" [disabled]="formRef.invalid">Edit Now</button>
+            <button type="button" color="warn" mat-raised-button (click)="closeModal()">Cancel</button>
+        </div>
+    </form>
+</div>
+<!-- </section> -->

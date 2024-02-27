@@ -1,0 +1,24 @@
+.scrollable-list-container {
+  max-height: 70vh; 
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+.smokey-white-list {
+  background:linear-gradient(90deg,#4776e6,#8e54e9);
+  line-height: 20px;
+  border-radius: 8px;
+  color: whitesmoke;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(37, 56, 134);
+}
+
+.smokey-white-list:hover {
+  background-color: rgb(37, 56, 134);
+}
+
+.smokey-white-list.selected {
+  box-shadow:rgb(51, 70, 145);
+  background-color: rgb(40, 55, 116) !important;
+}

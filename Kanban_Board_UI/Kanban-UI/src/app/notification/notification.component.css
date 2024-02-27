@@ -1,0 +1,28 @@
+
+.task-modal {
+  padding: 20px;
+  height: 80vh;
+  overflow-y: auto;
+  background:linear-gradient(90deg,#4776e6,#8e54e9);
+  border:1px solid rgb(115, 48, 182);
+  box-shadow: 2px 1px 10px 5px rgb(115, 48, 182);
+}
+
+h1{
+  font-size: 25px;
+  color: rebeccapurple;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.smokey-white-list {
+  background-color:transparent; 
+  line-height: 20px;
+  padding: 10px ; 
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+

@@ -1,0 +1,62 @@
+ .task-modal {
+  width: 600px;
+  height: auto;
+  padding: 20px;
+  background-color: #e2d2fb;
+  border:1px solid rgb(115, 48, 182);
+  box-shadow: 2px 1px 10px 5px rgb(115, 48, 182);
+}
+
+h1{
+  font-size: 25px;
+  color: rebeccapurple;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+
+input{
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  border-radius: 20px;
+  color: whitesmoke;
+}
+
+.task-modal textarea,
+.task-modal select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+} 
+
+.task-modal input{
+  background-color: transparent;
+}
+
+mat-option{
+  background:linear-gradient(90deg,#4776e6,#8e54e9);
+  width: 100%;
+  color: whitesmoke;
+}
+mat-option:hover {
+  color: rebeccapurple;
+}

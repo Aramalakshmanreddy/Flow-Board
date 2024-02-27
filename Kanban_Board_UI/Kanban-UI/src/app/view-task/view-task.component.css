@@ -1,0 +1,56 @@
+
+.smokey-white-list {
+  background-color:transparent; 
+  line-height: 20px;
+  padding: 10px ; 
+  border-radius: 6px;
+  font-size: 90%;
+}
+.smokey-white-list:hover {
+  background-color: rgb(240, 240, 240); 
+}
+.smokey-white-list.selected {
+  box-shadow:#f0f0f0;
+  background-color: #bab9b9 !important;
+}
+.board-list {
+  padding: 2px;
+  border: solid 1px #ccc;
+  height: 70vh;
+  background: white;
+  border-radius: 4px;
+  overflow-y: auto;
+  overflow-x: auto; 
+}
+
+.column-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; 
+  overflow-y: auto; 
+}
+
+.card-body{
+  word-wrap: break-word;
+  overflow-y: auto; 
+  background-color: whitesmoke;
+}
+
+mat-icon{
+  font-size: 20px;
+}
+
+.dropdown-menu{
+  font-size: 95%;
+  background:linear-gradient(90deg,#4776e6,#8e54e9);
+}
+.card{
+  color: rgb(0, 0, 0);
+  border:2px solid #9b61fa;
+}
+
+.card-header{
+  background-color: whitesmoke;
+}
+
+  

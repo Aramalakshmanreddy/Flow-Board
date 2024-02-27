@@ -1,0 +1,13 @@
+<div class="task task-modal">
+  <h1 class="title">Notifications</h1>
+  <div *ngIf="notificationsList!=null">
+    <div *ngFor="let notification of notificationsList.slice().reverse()"
+      class="task smokey-white-list text-white p-2 mb-2">
+      <div class="border-bottom  border-dark">
+        <div class="mb-1">
+          <div style="font-weight: bold;">Message: <span style="font-weight: normal; margin-left: 5px;">{{
+              notification.message | titlecase }}</span></div>
+        </div>
+      </div>
+
+    </div>

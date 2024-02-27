@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="header row">
+  <div class="col-lg-4 col-md-6 col-sm-12"><img id="images"  src="../../assets/images/White logo - no background.png" height="auto" width="70px"></div>
+  <span class="col-lg-4 col-md-6 col-sm-12 title">{{title}}</span>
+  <div class="col-lg-4 col-md-6 col-sm-12 icons">
+    <!-- <div class="row "> -->
+      <a  routerLink="../home"><mat-icon matTooltip="Home">home</mat-icon></a>
+      <a  (click)="toggle()"> <mat-icon matTooltip="Notifications">notifications</mat-icon></a>
+      <mat-icon  [matMenuTriggerFor]="menu" (click)="getUserName()" matTooltip="Profile">account_circle</mat-icon>
+      <mat-menu #menu="matMenu" class="dropdown">
+        <button mat-menu-item>{{userName | titlecase}}</button>
+        <mat-divider ></mat-divider>
+        <button  mat-menu-item (click)="logout()">Log Out</button>
+      </mat-menu>
+    <!-- </div> -->
+  </div>
+</mat-toolbar>
+

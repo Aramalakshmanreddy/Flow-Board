@@ -1,0 +1,54 @@
+<!-- <div class="NewTask"> -->
+<div class="task task-modal">
+  <h1 class="text-center"><b>Create New Task</b></h1>
+  <form (ngSubmit)="createTask()" [formGroup]="taskForm">
+
+    <mat-form-field appearance="outline" class="form-group">
+      <mat-label>Enter Task Name</mat-label>
+      <input matInput placeholder="name" name="taskName" formControlName="taskName">
+      <mat-error *ngIf="taskName?.errors?.['required']">Task name cannot be empty</mat-error>
+      <mat-error *ngIf="taskName?.errors?.['pattern']">Task name should have 3 characters starting with a
+        letter</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-group">
+      <mat-label>Enter Task description</mat-label>
+      <input matInput placeholder="description" name="description" maxlength="100" formControlName="description">
+      <mat-error *ngIf="description?.errors?.['required']">Description cannot be empty</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-group">
+      <mat-label>Select Assignee</mat-label>
+      <mat-select placeholder="Assignee" id="select" name="assignee" formControlName="assignee">
+        <mat-option *ngFor="let member of members" [value]="member">{{ member | titlecase }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="assignee?.errors?.['required']">Assignee cannot be empty</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="form-group">
+      <mat-label>Enter Due Date</mat-label>
+      <input matInput [matDatepicker]="picker" [min]="minDate" name="dueDate" formControlName="dueDate"
+        placeholder="Pick due Date">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker color="primary"></mat-datepicker>
+      <mat-error *ngIf="dueDate?.errors?.['required']">Due Date cannot be empty</mat-error>
+    </mat-form-field>
+
+    <div class="form-group">
+      <mat-label>Select Priority</mat-label>
+      <mat-chip-listbox formControlName="priority" name="priority">
+        <mat-chip-option value="Normal">Normal</mat-chip-option>
+        <mat-chip-option value="High">High</mat-chip-option>
+        <mat-chip-option value="Low">Low</mat-chip-option>
+      </mat-chip-listbox>
+      <mat-error *ngIf="priority?.errors?.['required']">Priority cannot be empty</mat-error>
+    </div>
+
+    <div class="btn-container">
+      <button color="primary" class="me-3" mat-raised-button matTooltip="Create the Task" type="submit"
+        [disabled]="taskForm.invalid">Create Now</button>
+      <button type="button" color="warn" mat-raised-button (click)="closeModal()">Cancel</button>
+    </div>
+  </form>
+</div>

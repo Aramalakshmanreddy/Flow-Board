@@ -1,0 +1,18 @@
+server:
+  port: 8085
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: notification-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/notification_db
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

@@ -1,0 +1,10 @@
+
+  <div class="scrollable-list-container">
+    <div *ngFor="let list of boardListData; let i=index" (click)="onSelection(list)" class="smokey-white-list" [class.selected]="selectedBoardId === list.boardId">
+      <div class="float-end">
+      </div> 
+      <div>{{ list.boardName | titlecase}}</div>
+      <div><p>{{ list.description }}</p></div>
+    </div>
+  </div>
+

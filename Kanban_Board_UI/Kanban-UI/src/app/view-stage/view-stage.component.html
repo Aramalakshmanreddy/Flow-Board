@@ -1,0 +1,31 @@
+<div class="board-container">
+
+  <div class="board-columns" *ngFor="let column of stages">
+
+    <div class="board-list p-2">
+
+      <div class="column-title p-2">
+
+        <div id="stage-name" class="ps-2">{{ column.stageName | titlecase }}</div>
+        <div *ngIf="!['To Be Done', 'In Progress', 'Backlog', 'Completed'].includes(column.stageName)">
+          <a (click)="updateStage(boardId , column)" *ngIf="creator === userName">
+            <mat-icon matTooltip="Edit the Stage">edit</mat-icon>
+          </a>
+          <a class="ps-3" (click)="deleteStage(boardId, column.stageId)" *ngIf="creator === userName">
+            <mat-icon matTooltip="Delete the Stage">delete</mat-icon>
+          </a>
+        </div>
+
+      </div>
+
+      <div *ngIf="column.tasks != null" class="p-2">
+        <app-view-task class="class="tasks-container [creator]="creator"  [task]="column.tasks" [stageId]="column.stageId" [stageName]="column.stageName"
+          [boardId]="boardId" [stages]="stages" (taskMoved)="handelUpdatesStages($event)" [members]="members">
+        </app-view-task>
+      </div>
+
+    </div>
+
+  </div>
+  
+</div>

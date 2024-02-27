@@ -1,0 +1,130 @@
+<mat-toolbar color="primary" class="header">
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <img id="images" src="../../assets/images/White logo - no background.png" height="auto" width="70px">
+        <span id="btn" class="text-center">{{title}}</span>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div *ngIf="!isUserLoggedIn" class="log-button">
+            <button mat-raised-button class="me-3" matTooltip="Log In"
+                (click)="logInButtonClicked()">Log In</button>
+            <button mat-raised-button matTooltip="Register"
+                (click)="signUpButtonClicked()">Sign Up</button>
+        </div>
+        <div class="icon float-end" *ngIf="isUserLoggedIn">
+            <a routerLink="../dashboard"><mat-icon matTooltip="Dashboard">dashboard</mat-icon></a>
+            <mat-icon [matMenuTriggerFor]="menu" (click)="getUserName()" matTooltip="Profile">account_circle</mat-icon>
+        </div>
+    </div>
+</mat-toolbar>
+<mat-menu #menu="matMenu" class="dropdown">
+    <button mat-menu-item>{{userName | titlecase}}</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="logout()">Log Out</button>
+</mat-menu>
+<img src="../../assets/images/output184.png" alt="Wave-Image" width="100%" height="25%" class="design"><br>
+
+<div class="row dialoge">
+    <div class="col-lg-6 col-md-12 text-center div p-5">
+        <div class="firstDiv">
+            <h1>The First Agile Kanban-like LMS</h1>
+            <p id="para1">it's the simplest way to prepare new employees and cultivate a foundation for business success,
+                the
+                online kanban tool used to plan over 2 million projects.</p>
+            <div *ngIf="!isUserLoggedIn">
+                <p id="para2">Take first step to work in</p>
+                <button mat-raised-button color="accent" class="me-3" style="color: whitesmoke;" matTooltip="Log In"
+                (click)="logInButtonClicked()">Log In</button>
+            <button mat-raised-button color="accent" style="color: whitesmoke;" matTooltip="Register"
+                (click)="signUpButtonClicked()">Sign Up</button>
+            </div>
+            <section class="body">
+                <app-user-login *ngIf="loginFlag"></app-user-login>
+                <app-user-registration *ngIf="signUpFlag"></app-user-registration>
+            </section>
+        </div>
+    </div>
+    <img class="col-lg-6 col-md-12"
+        src="../../assets/images/kanban-board-project-management-agile-teams-vector-45115911.png" alt="kanbanBoard"
+        width="50%" height="60%"><br>
+</div>
+
+<div class="col-lg-12 col-md-12 data">
+
+    <div class="second">
+        <h2 class="section1">What Does Kanban Mean?</h2>
+        <p class="para3">The Japanese word kanban means “billboard” or “visual card,” which is a simple yet accurate way to describe
+            the visual approach to the kanban methodology for managing work in manufacturing, project management and
+            software development.</p>
+
+        <h2 class="section1">What Is Kanban?</h2>
+        <p class="para3">Kanban is a workflow management method that allows project managers to visualize their team’s work on
+            easy-to-use boards that facilitate the process of planning, <a
+                href="https://www.projectmanager.com/guides/project-scheduling">scheduling</a> and tracking work. By
+            using kanban boards, project managers have full transparency in the task management process. The kanban
+            methodology consists of kanban boards, kanban cards, principles and practices and is typically used to
+            manage manufacturing and software development projects. However, it’s a versatile methodology that can be
+            used to manage any type of work.</p>
+
+        <h2 class="section1">What Is a Kanban System?</h2>
+        <p class="para3">A kanban system is defined as the framework that organizations use for the practical application of the
+            kanban methodology. A kanban system might use either analog or software tools to help project managers
+            create kanban boards.</p>
+        <p class="para3">Kanban software takes the basic visual approach of a <a
+                href="https://www.projectmanager.com/blog/what-is-a-kanban-board">kanban board</a> and cards and
+            digitizes it so the workflow can be seen by the whole team. It makes organization easier and helps project
+            managers and teams manage the workflow better. The software fulfills the lean project management core
+            practice of continuous improvement. Cutting waste and automating some aspects of the process through kanban
+            board software features allows agile teams to focus on their activities.</p>
+        <p class="para3"><a href="https://www.projectmanager.com/">ProjectManager</a> is a kanban tool that does all this and more.
+            Build automated workflows for your kanban processes and even work in different views. Build plans with
+            Gantt, then execute in kanban boards and track with dashboards. It’s all in one powerful project and work
+            management software. Get started for free.</p>
+
+        <h2 class="section1">History of Kanban</h2>
+        <p class="para3">Kanban was developed by Taiichi Ohno, an industrial engineer at Toyota in the 1940s. It was originally a task
+            management system to execute <a href="https://www.projectmanager.com/blog/what-is-lean-manufacturing">lean
+                manufacturing</a>. It was designed to improve the Toyota just-in-time (JIT) production system efficiency
+            by limiting supplies and resources to what was needed for the immediate work items. Today, kanban boards are
+            used in nearly every industry, most notably in agile software development.</p>
+        <p class="para3">The kanban method was originally created as a lean manufacturing tool to maximize production efficiency.
+            Since then, it’s become a great <a href="https://www.projectmanager.com/guides/task-management">task
+                management</a> tool for DevOps and agile teams and is used in different industries such as software
+            development.</p>
+
+        <h2 class="section1">When Should You Use Kanban?</h2>
+        <p class="para3">As we learned above, kanban is a methodology that was first invented to improve existing manufacturing
+            processes. Kanban is commonly adopted by manufacturing organizations to improve their efficiency and
+            profitability by improving their operations. However, kanban might also be used for managing software
+            development and other types of <a href="https://www.projectmanager.com/blog/project-definition">projects</a>
+            from scratch.</p>
+
+        <h2 class="section1">How Does Kanban Work?</h2>
+        <p class="para3">As stated, kanban is a set of principles, practices and tools that are used to manage projects and improve
+            how teams work. Here’s an overview of each of the elements that make up the kanban methodology. By using
+            these together, you can create a kanban system or framework for your organization.</p>
+
+        <h3 class="section1">Kanban Principles</h3>
+        <p class="para3">Before we learn about kanban boards, kanban cards and WIP limits, let’s learn the <a
+                href="https://www.projectmanager.com/blog/kanban-principles">principles</a> of the kanban methodology.
+        </p>
+        <ul class="para3">
+            <li><strong>Start with what you’re doing now:</strong><span class="para4">The first step when implementing kanban is to focus
+                on what the organization is currently doing. Don’t make changes to your process immediately, but use
+                kanban to visualize your current workflow and begin making improvements.</span> </li>
+            <li><strong>Changes occur organically over time and shouldn’t be rushed:</strong><span class="para4"> One of the key aspects of
+                kanban is the notion of <a
+                    href="https://www.projectmanager.com/blog/continuous-improvement-business-strategy-quick-guide">continuous
+                    improvement</a>, which consists of making small, incremental changes based on careful observation of
+                workflows instead of making radical changes.</span></li>
+            <li><strong>Respect current roles and responsibilities:</strong><span class="para4"> Implementing the kanban methodology doesn’t
+                require any change in the organizational structure of teams. Changes in roles and responsibilities might
+                come as the continuous improvement process advances but aren’t part of the kanban methodology.</span></li>
+            <li><strong>Encourage leadership from everyone:</strong><span class="para4"> Kanban promotes a collaborative atmosphere where
+                team members can suggest improvement opportunities to help keep the mandate of continuous improvement
+                for maximizing efficiency.</span></li>
+        </ul>
+
+    </div>
+
+</div>
+<app-footer></app-footer>

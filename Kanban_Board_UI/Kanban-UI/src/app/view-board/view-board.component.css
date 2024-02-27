@@ -1,0 +1,53 @@
+
+.kanban-board {
+  padding: 20px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: auto;  
+  background-color: transparent;
+}
+
+.column-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; 
+  overflow-y: auto; 
+  background-color: transparent;
+}
+ .column-title {
+  background-color:transparent;
+  padding: 10px;
+  font-weight: bold;
+}
+
+button{
+  background:linear-gradient(90deg,#4776e6,#8e54e9);
+  border-radius: 20px;
+  border: #0f4ad3;
+}
+
+mat-icon{
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.span{
+   color: whitesmoke;
+   font-size: 80%;
+}
+
+.viewBoard{
+  background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4M2JhdGNoMi0wMjcteC5qcGc.jpg');
+  background-size: cover;
+  height: 100%;
+  min-height: 87vh;
+}
+
+#board-title{
+  font-size: 25px;
+  color:  rgb(37, 56, 134);
+  font-weight:bold;
+}
+
+  
+  

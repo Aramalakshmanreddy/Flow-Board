@@ -1,0 +1,152 @@
+.header {
+    height: 75px;
+    font-size: 30px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+mat-icon {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right: 20px;
+}
+
+a mat-icon {
+    font-size: 30px;
+}
+
+.log-button {
+    float: inline-end;
+}
+
+.log-button button,
+.firstDiv button {
+    background: linear-gradient(90deg, #4776e6, rgb(141, 88, 225));
+    border-radius: 20px;
+    border: #0f4ad3;
+    color: whitesmoke;
+}
+.design {
+    padding-top: 75px;
+}
+
+#btn {
+    padding: 22px;
+    margin-left: 62%;
+}
+
+.dropdown {
+    font-size: 50%;
+}
+
+button:hover {
+    color: whitesmoke;
+    background: linear-gradient(90deg, #4776e6, #8e54e9);
+}
+
+.body {
+    min-height: 90vh;
+    position: fixed;
+    transform: translate(90%, -100%);
+    background-color: transparent;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 55px;
+    color: #133074;
+    font-weight: bolder;
+    justify-content: left;
+
+}
+
+.div {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.dialoge {
+    justify-content: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#para1 {
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    font-size: 22px;
+}
+
+#para2 {
+    color: rgb(23, 23, 229);
+    line-height: 40px;
+    font-size: 22px;
+}
+
+.para3 {
+    line-height: 35px;
+    font-size: 18px;
+}
+
+.para4 {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.firstDiv {
+    padding: 60px;
+    justify-content: left;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(73, 70, 70);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(73, 70, 70);
+    line-height: 23px;
+}
+
+
+.data {
+    padding-top: 0px;
+    width: 80% auto;
+}
+
+.second {
+    width: 95%;
+    padding-left: 5%;
+    font-size: 15px;
+}
+
+.section1 {
+    font-size: 30px;
+    color: #153b95;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.second a {
+    color: blue;
+    margin: 0;
+}
+
+.second a:hover {
+    color: red;
+    text-decoration: underline;
+}
